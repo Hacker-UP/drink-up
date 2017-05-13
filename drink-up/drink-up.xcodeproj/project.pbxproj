@@ -461,7 +461,7 @@
 				TargetAttributes = {
 					D557D3641EC6FDFA00ACC885 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = DNL5G5M9A8;
+						DevelopmentTeam = 2KU9DLED5P;
 						ProvisioningStyle = Automatic;
 					};
 					D557D37D1EC6FDFA00ACC885 = {
@@ -751,7 +751,7 @@
 			baseConfigurationReference = 52E0372120D1D9642302FC7C /* Pods-drink-up.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DNL5G5M9A8;
+				DEVELOPMENT_TEAM = 2KU9DLED5P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/drink-up/app/framework/PrefixHeader.pch";
 				INFOPLIST_FILE = "drink-up/Info.plist";
@@ -767,7 +767,7 @@
 			baseConfigurationReference = D00DC54FA044B64C8D74B425 /* Pods-drink-up.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DNL5G5M9A8;
+				DEVELOPMENT_TEAM = 2KU9DLED5P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/drink-up/app/framework/PrefixHeader.pch";
 				INFOPLIST_FILE = "drink-up/Info.plist";

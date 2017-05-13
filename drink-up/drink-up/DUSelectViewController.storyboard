@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-hN-qJ6">
-                                <rect key="frame" x="20" y="82" width="335" height="335"/>
+                                <rect key="frame" x="20" y="124" width="335" height="335"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xNO-hN-qJ6" secondAttribute="height" multiplier="1:1" id="2Wp-be-snb"/>
                                 </constraints>
@@ -34,9 +34,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xNO-hN-qJ6" firstAttribute="top" secondItem="6SE-yf-W88" secondAttribute="top" constant="82" id="3aZ-1j-bZi"/>
                             <constraint firstItem="xNO-hN-qJ6" firstAttribute="leading" secondItem="6SE-yf-W88" secondAttribute="leading" constant="20" id="5oz-2i-OOg"/>
                             <constraint firstAttribute="trailing" secondItem="xNO-hN-qJ6" secondAttribute="trailing" constant="20" id="9Tw-pt-2e1"/>
+                            <constraint firstItem="OVG-fT-6DR" firstAttribute="top" secondItem="xNO-hN-qJ6" secondAttribute="bottom" constant="208" id="Fly-ET-zCe"/>
                             <constraint firstItem="xNO-hN-qJ6" firstAttribute="centerX" secondItem="6SE-yf-W88" secondAttribute="centerX" id="zEZ-fS-SQd"/>
                         </constraints>
                     </view>
@@ -58,16 +58,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-full" translatesAutoresizingMaskIntoConstraints="NO" id="Cy1-ba-YCc">
-                                <rect key="frame" x="131" y="37.5" width="112.5" height="300"/>
+                                <rect key="frame" x="121.5" y="11.5" width="132" height="352"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="NWF-H1-lj4"/>
+                                    <constraint firstAttribute="height" constant="352" id="NWF-H1-lj4"/>
                                     <constraint firstAttribute="width" secondItem="Cy1-ba-YCc" secondAttribute="height" multiplier="3:8" id="swx-Kr-2cl"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250mL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba4-L3-6BX">
+                                <rect key="frame" x="143.5" y="193.5" width="88" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S Container" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxm-af-EY8">
+                                <rect key="frame" x="145.5" y="178" width="84" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ba4-L3-6BX" firstAttribute="centerX" secondItem="UOr-AZ-pTc" secondAttribute="centerX" id="8re-TE-xV0"/>
                             <constraint firstItem="Cy1-ba-YCc" firstAttribute="centerY" secondItem="UOr-AZ-pTc" secondAttribute="centerY" id="CBS-fe-cwJ"/>
+                            <constraint firstItem="zxm-af-EY8" firstAttribute="centerX" secondItem="UOr-AZ-pTc" secondAttribute="centerX" id="c8R-LH-KfH"/>
+                            <constraint firstItem="ba4-L3-6BX" firstAttribute="top" secondItem="zxm-af-EY8" secondAttribute="bottom" constant="-4" id="evy-rI-9NP"/>
+                            <constraint firstItem="zxm-af-EY8" firstAttribute="centerY" secondItem="UOr-AZ-pTc" secondAttribute="centerY" id="rrh-oT-8oS"/>
                             <constraint firstItem="Cy1-ba-YCc" firstAttribute="centerX" secondItem="UOr-AZ-pTc" secondAttribute="centerX" id="t5G-1w-GnV"/>
                         </constraints>
                     </view>
@@ -75,11 +91,13 @@
                     <size key="freeformSize" width="375" height="375"/>
                     <connections>
                         <outlet property="containerImageView" destination="Cy1-ba-YCc" id="ZN0-4k-QBA"/>
+                        <outlet property="nameLabel" destination="zxm-af-EY8" id="RbO-Z2-NIC"/>
+                        <outlet property="volumeLabel" destination="ba4-L3-6BX" id="Q00-3L-MMK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkX-0W-Ht2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494" y="94"/>
+            <point key="canvasLocation" x="493.60000000000002" y="93.103448275862078"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="99O-oq-08V">

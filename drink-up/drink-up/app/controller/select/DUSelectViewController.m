@@ -123,8 +123,8 @@
         self.pageViewController = (CRPageViewController *)segue.destinationViewController;
         self.pageViewController.countPageInController = self.viewControllersNumber;
         self.pageViewController.childVCSize = CGSizeMake(250, 500);
-        self.pageViewController.sizeBetweenVC = 10;
-        self.pageViewController.OffsetOfHeightCentralVC = 0;
+        self.pageViewController.sizeBetweenVC = -20;
+        self.pageViewController.OffsetOfHeightCentralVC = -20;
         self.pageViewController.animationSpeed = 0.5;
         self.pageViewController.animation = UIViewAnimationCurveEaseInOut;
         self.pageViewController.viewControllers = [NSMutableArray arrayWithArray:self.sourse];
@@ -138,12 +138,12 @@
 #pragma mark - CRPageViewControllerDelegate
 
 - (void)unfocusedViewController:(DUContainerViewController *)viewController {
-    [viewController zoomingImageOut];
+//    [viewController zoomingImageOut];
 }
 
 - (void)focusedViewController:(DUContainerViewController *)viewController {
     self.curentVC = viewController;
-    [viewController zoomingImageIn];
+//    [viewController zoomingImageIn];
 }
 
 - (DUContainerViewController *)pageViewController:(CRPageViewController *)pageViewController viewControllerAfterViewController:(DUContainerViewController *)viewController {

@@ -11,6 +11,8 @@
 @interface DUContainerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *containerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *volumeLabel;
 
 @end
 
@@ -19,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.nameLabel.text = self.sourse[0];
+    self.volumeLabel.text = [NSString stringWithFormat:@"%@mL", self.sourse[1]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,7 +34,7 @@
 
 - (void)zoomingImageIn {
     [self.view layoutIfNeeded];
-    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.3 delay:0.3 options:UIViewAnimationOptionCurveLinear animations:^{
         CGRect rectOfImage = self.containerImageView.frame;
         rectOfImage.origin.x -= 26;
         rectOfImage.origin.y -= 26;
@@ -41,7 +47,7 @@
 
 - (void)zoomingImageOut {
     [self.view layoutIfNeeded];
-    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.3 delay:0.3 options:UIViewAnimationOptionCurveLinear animations:^{
         CGRect rectOfImage = self.containerImageView.frame;
         rectOfImage.origin.x += 26;
         rectOfImage.origin.y += 26;
