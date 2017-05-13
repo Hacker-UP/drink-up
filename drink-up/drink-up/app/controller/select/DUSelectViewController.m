@@ -10,6 +10,7 @@
 #import "HVideoViewController.h"
 #import "CRPageViewController.h"
 #import "DUContainerViewController.h"
+#import "DUFeedbackViewController.h"
 
 #import "Masonry.h"
 
@@ -67,7 +68,8 @@
     ctrl.modalPresentationStyle = UIModalPresentationOverFullScreen;
     ctrl.HSeconds = 10000;//设置可录制最长时间
     ctrl.takeBlock = ^(id item) {
-        
+        DUFeedbackViewController *feedbackVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackViewController"];
+        [self.navigationController pushViewController:feedbackVC animated:true];
     };
     [self presentViewController:ctrl animated:YES completion:nil];
 }
