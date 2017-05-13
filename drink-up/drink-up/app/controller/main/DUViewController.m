@@ -7,6 +7,7 @@
 //
 
 #import "DUViewController.h"
+#import "DUSelectViewController.h"
 #import "HVideoViewController.h"
 
 @interface DUViewController ()
@@ -28,12 +29,19 @@
             
         }
     };
-    [self presentViewController:ctrl animated:YES completion:nil];
+//    [self presentViewController:ctrl animated:YES completion:nil];
+    [self.navigationController pushViewController:[DUSelectViewController new] animated:YES];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 

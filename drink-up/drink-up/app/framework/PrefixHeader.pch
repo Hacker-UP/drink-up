@@ -35,6 +35,7 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 
-
+#define DUButtonColor [UIColor colorWithRed:87.0 / 255.0 green:169.0 / 255.0 blue:221.0 / 255.0 alpha:1]
+#define DUButtonTitleFont [UIFont fontWithName:@"PingFangSC-Light" size:18]
 
 #endif /* PrefixHeader_pch */
