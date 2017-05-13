@@ -7,16 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2601A8E13B75AD382C4DBD16CD0ECB24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		35DE8CAAAB96A29DC1D4CE16E93C75BA /* Pods-drink-up-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C68454C6759D4E9C95EB984CF2B97F82 /* Pods-drink-up-dummy.m */; };
-		3EB74BAE8ED66F73560BE2B7B9B7FF2B /* CRPageViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C033F13456C74B09E7B1218ACEA26 /* CRPageViewController-dummy.m */; };
-		5FDE8D30C3BECCE37D59696B6F2C41E4 /* CRPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2838FB06ADF3B2AC0A475D28EEB68C8 /* CRPageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D668FC9C84DC782CBAADA46325811BA9 /* CRPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B088F753DBE0C7AEDFC17708F3645B /* CRPageViewController.m */; };
+		053D980D80AD73E93E7B1552A25226CB /* UIImage+HTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A072AD54BFACEC6FFE40D9047FB36F /* UIImage+HTButton.m */; };
+		19A71775C7090FB6CEBA5DF0CB2078D8 /* UIImage+HTButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFB5CF90BD9F18C9D1ADAD1055B955B /* UIImage+HTButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		290FF520E9AC114280438FEC97670AAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		29FC45F736E5EE7C1589EC483901F325 /* HTPressableButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AC54C370E4E1400B59BA26976B8F1E0 /* HTPressableButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EB74BAE8ED66F73560BE2B7B9B7FF2B /* CRPageViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3ED68D476B6DA7A57A3B5D098D74AFE /* CRPageViewController-dummy.m */; };
+		5D7E815AA6B4408E24FED300AA31D58B /* UIColor+HTColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 90232AC184F920BBBA56631526FCE17B /* UIColor+HTColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FDE8D30C3BECCE37D59696B6F2C41E4 /* CRPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AF3056102E3085EBB44BC106A7E7B7 /* CRPageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6256EB59488B42AB0B43712054FC9ADA /* HTPressableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AD893E3FB2C9569AA7C06ADE09EB6 /* HTPressableButton.m */; };
+		75B25E65683DD0EA6A41D3A25318FE35 /* HTPressableButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B0E71AF9FE33CC264C13F5801FADC2 /* HTPressableButton-dummy.m */; };
+		8C15A74605A275B47B44AB3A691D2A10 /* HTPressableButtonPrefs.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCAEFE688D5E9D0E3503992641A2D7F /* HTPressableButtonPrefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96D0DF2F7849525EC8E1E184236077CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		BBECBF3DEE92BA0AF28B8D28EE73BC21 /* UIColor+HTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8688356055FBEE624713901F5FFEF278 /* UIColor+HTColor.m */; };
+		D668FC9C84DC782CBAADA46325811BA9 /* CRPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B324D5E27FEBA729BC3E1AD7B5FB0FB9 /* CRPageViewController.m */; };
+		DA4400393598BBAE70A713B186E4FBCE /* Pods-drink-up-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C68454C6759D4E9C95EB984CF2B97F82 /* Pods-drink-up-dummy.m */; };
+		DCAC6D0580EF1749ADA1FC04D0166426 /* HTPressableButtonPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = BB55205505C6C768F468C455404F8F20 /* HTPressableButtonPrefs.m */; };
 		F221C9EDF798764D0C02543B87C663D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4FF1EE0A46BC6B1C52219A4EA4264ABE /* PBXContainerItemProxy */ = {
+		0E010E4FF4DA2A89DE13AD1C1105925E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7951E150B2E673E5C8E41DC28A5ADBD9;
+			remoteInfo = HTPressableButton;
+		};
+		9EF196306610BC01EE026AB646442FF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -26,33 +43,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A0B5EDE4A88446691AAFF97ABABFA2C /* libCRPageViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCRPageViewController.a; path = libCRPageViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1803F454A88FB5BF4BA0A4A9D8DD4114 /* Pods-drink-up-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-drink-up-frameworks.sh"; sourceTree = "<group>"; };
+		20759C1C7A5852B9FAD6CDB104899C83 /* CRPageViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRPageViewController.xcconfig; sourceTree = "<group>"; };
 		274A5D08C6746ECDB6CF23E8FE718950 /* Pods-drink-up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-drink-up.debug.xcconfig"; sourceTree = "<group>"; };
+		2D11E0DCED21DF99F93BF46BB0DC6F5F /* HTPressableButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTPressableButton-prefix.pch"; sourceTree = "<group>"; };
+		32AF3056102E3085EBB44BC106A7E7B7 /* CRPageViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRPageViewController.h; path = CRPageViewController/Classes/CRPageViewController/CRPageViewController.h; sourceTree = "<group>"; };
+		3AC54C370E4E1400B59BA26976B8F1E0 /* HTPressableButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTPressableButton.h; path = Classes/HTPressableButton.h; sourceTree = "<group>"; };
 		3CA647E6ADA3B859EF1001AD4786C2B2 /* Pods-drink-up-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-drink-up-acknowledgements.plist"; sourceTree = "<group>"; };
 		41C31AE28AC66B2EE020A8407C2DB77A /* Pods-drink-up-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-drink-up-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4B1E88D083067968E2CDA693D16989AF /* HTPressableButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTPressableButton.xcconfig; sourceTree = "<group>"; };
+		54B416595EE5B656C246494E993E027B /* CRPageViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRPageViewController-prefix.pch"; sourceTree = "<group>"; };
 		60CB86BE13C0943C8E1D1EF0BA16E52C /* Pods-drink-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-drink-up.release.xcconfig"; sourceTree = "<group>"; };
 		69432F5A12C9E8A96CDF0D273027B05D /* Pods-drink-up-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-drink-up-resources.sh"; sourceTree = "<group>"; };
-		6B9AED4E85895D9A6C0E0A6CF68485BD /* CRPageViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRPageViewController-prefix.pch"; sourceTree = "<group>"; };
-		74B088F753DBE0C7AEDFC17708F3645B /* CRPageViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRPageViewController.m; path = CRPageViewController/Classes/CRPageViewController/CRPageViewController.m; sourceTree = "<group>"; };
+		6C6AD893E3FB2C9569AA7C06ADE09EB6 /* HTPressableButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTPressableButton.m; path = Classes/HTPressableButton.m; sourceTree = "<group>"; };
+		8097D5A36B721CA49D1980DB6EA0E1A5 /* libHTPressableButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHTPressableButton.a; path = libHTPressableButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8688356055FBEE624713901F5FFEF278 /* UIColor+HTColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HTColor.m"; path = "Classes/UIColor+HTColor.m"; sourceTree = "<group>"; };
+		90232AC184F920BBBA56631526FCE17B /* UIColor+HTColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+HTColor.h"; path = "Classes/UIColor+HTColor.h"; sourceTree = "<group>"; };
+		92B0E71AF9FE33CC264C13F5801FADC2 /* HTPressableButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTPressableButton-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B70D167A25185A7C015CC3C7F54D8ACF /* CRPageViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRPageViewController.xcconfig; sourceTree = "<group>"; };
-		BD5C033F13456C74B09E7B1218ACEA26 /* CRPageViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRPageViewController-dummy.m"; sourceTree = "<group>"; };
+		A5A072AD54BFACEC6FFE40D9047FB36F /* UIImage+HTButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+HTButton.m"; path = "Classes/UIImage+HTButton.m"; sourceTree = "<group>"; };
+		AC482E3DEB32B910BFF8A3E9EE19A827 /* libCRPageViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCRPageViewController.a; path = libCRPageViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCAEFE688D5E9D0E3503992641A2D7F /* HTPressableButtonPrefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTPressableButtonPrefs.h; path = Classes/HTPressableButtonPrefs.h; sourceTree = "<group>"; };
+		B324D5E27FEBA729BC3E1AD7B5FB0FB9 /* CRPageViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRPageViewController.m; path = CRPageViewController/Classes/CRPageViewController/CRPageViewController.m; sourceTree = "<group>"; };
+		BB55205505C6C768F468C455404F8F20 /* HTPressableButtonPrefs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTPressableButtonPrefs.m; path = Classes/HTPressableButtonPrefs.m; sourceTree = "<group>"; };
 		C68454C6759D4E9C95EB984CF2B97F82 /* Pods-drink-up-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-drink-up-dummy.m"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2838FB06ADF3B2AC0A475D28EEB68C8 /* CRPageViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRPageViewController.h; path = CRPageViewController/Classes/CRPageViewController/CRPageViewController.h; sourceTree = "<group>"; };
-		DE7868CA16EB904C7A6C6BBAD0C782EF /* libPods-drink-up.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-drink-up.a"; path = "libPods-drink-up.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFB5CF90BD9F18C9D1ADAD1055B955B /* UIImage+HTButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+HTButton.h"; path = "Classes/UIImage+HTButton.h"; sourceTree = "<group>"; };
+		F3ED68D476B6DA7A57A3B5D098D74AFE /* CRPageViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRPageViewController-dummy.m"; sourceTree = "<group>"; };
+		F5FDF942F38DF4D3706C61B5C2916AFF /* libPods-drink-up.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-drink-up.a"; path = "libPods-drink-up.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B2893187ED00EAD11F8DA4BD2596440C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2601A8E13B75AD382C4DBD16CD0ECB24 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BAFC31A8D8EC63EA3CE14BFF0E72EF75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,9 +82,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E64341A9841E72F12C0FCFDBAF4EB513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D0DF2F7849525EC8E1E184236077CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA03DCCA2F5FFB5B2FA339C1354CC1EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290FF520E9AC114280438FEC97670AAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B971DB12CC32D13188743201E47CE7B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B1E88D083067968E2CDA693D16989AF /* HTPressableButton.xcconfig */,
+				92B0E71AF9FE33CC264C13F5801FADC2 /* HTPressableButton-dummy.m */,
+				2D11E0DCED21DF99F93BF46BB0DC6F5F /* HTPressableButton-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HTPressableButton";
+			sourceTree = "<group>";
+		};
 		1530E020A2C067B1F1E742C101477A43 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,15 +120,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		45681C4510D6FF1E6103565D8E7A1250 /* Support Files */ = {
+		32CCD522A93220EAFED2B07C42B953BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B70D167A25185A7C015CC3C7F54D8ACF /* CRPageViewController.xcconfig */,
-				BD5C033F13456C74B09E7B1218ACEA26 /* CRPageViewController-dummy.m */,
-				6B9AED4E85895D9A6C0E0A6CF68485BD /* CRPageViewController-prefix.pch */,
+				AC482E3DEB32B910BFF8A3E9EE19A827 /* libCRPageViewController.a */,
+				8097D5A36B721CA49D1980DB6EA0E1A5 /* libHTPressableButton.a */,
+				F5FDF942F38DF4D3706C61B5C2916AFF /* libPods-drink-up.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CRPageViewController";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A3D23EC8505AB2370CA6F4EB4D4DB31 /* All */ = {
+			isa = PBXGroup;
+			children = (
+				3AC54C370E4E1400B59BA26976B8F1E0 /* HTPressableButton.h */,
+				6C6AD893E3FB2C9569AA7C06ADE09EB6 /* HTPressableButton.m */,
+				ADCAEFE688D5E9D0E3503992641A2D7F /* HTPressableButtonPrefs.h */,
+				BB55205505C6C768F468C455404F8F20 /* HTPressableButtonPrefs.m */,
+				90232AC184F920BBBA56631526FCE17B /* UIColor+HTColor.h */,
+				8688356055FBEE624713901F5FFEF278 /* UIColor+HTColor.m */,
+				EBFB5CF90BD9F18C9D1ADAD1055B955B /* UIImage+HTButton.h */,
+				A5A072AD54BFACEC6FFE40D9047FB36F /* UIImage+HTButton.m */,
+			);
+			name = All;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -96,10 +158,21 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				C29C05C1B3BDC361355233C7145B71DD /* Pods */,
-				C76F6F1891D3BC126C50C7AE3EB549C7 /* Products */,
+				DE0BDD7F716B7915429687F2CD1FF306 /* Pods */,
+				32CCD522A93220EAFED2B07C42B953BA /* Products */,
 				1530E020A2C067B1F1E742C101477A43 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A6D33D47911FBF12B712A54AA242291B /* CRPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32AF3056102E3085EBB44BC106A7E7B7 /* CRPageViewController.h */,
+				B324D5E27FEBA729BC3E1AD7B5FB0FB9 /* CRPageViewController.m */,
+				CD265A4E54F30BDD8C34A458482F8BD3 /* Support Files */,
+			);
+			name = CRPageViewController;
+			path = CRPageViewController;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -108,23 +181,6 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C29C05C1B3BDC361355233C7145B71DD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FE8CDB78C40FE55797A8FCF06392F414 /* CRPageViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C76F6F1891D3BC126C50C7AE3EB549C7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0A0B5EDE4A88446691AAFF97ABABFA2C /* libCRPageViewController.a */,
-				DE7868CA16EB904C7A6C6BBAD0C782EF /* libPods-drink-up.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CC6B76C61FEF4D48FCD4BA6C4F7063E3 /* Pods-drink-up */ = {
@@ -142,15 +198,34 @@
 			path = "Target Support Files/Pods-drink-up";
 			sourceTree = "<group>";
 		};
-		FE8CDB78C40FE55797A8FCF06392F414 /* CRPageViewController */ = {
+		CD265A4E54F30BDD8C34A458482F8BD3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2838FB06ADF3B2AC0A475D28EEB68C8 /* CRPageViewController.h */,
-				74B088F753DBE0C7AEDFC17708F3645B /* CRPageViewController.m */,
-				45681C4510D6FF1E6103565D8E7A1250 /* Support Files */,
+				20759C1C7A5852B9FAD6CDB104899C83 /* CRPageViewController.xcconfig */,
+				F3ED68D476B6DA7A57A3B5D098D74AFE /* CRPageViewController-dummy.m */,
+				54B416595EE5B656C246494E993E027B /* CRPageViewController-prefix.pch */,
 			);
-			name = CRPageViewController;
-			path = CRPageViewController;
+			name = "Support Files";
+			path = "../Target Support Files/CRPageViewController";
+			sourceTree = "<group>";
+		};
+		CEFF3889FACCA6817A5D1533C392AAFC /* HTPressableButton */ = {
+			isa = PBXGroup;
+			children = (
+				6A3D23EC8505AB2370CA6F4EB4D4DB31 /* All */,
+				0B971DB12CC32D13188743201E47CE7B /* Support Files */,
+			);
+			name = HTPressableButton;
+			path = HTPressableButton;
+			sourceTree = "<group>";
+		};
+		DE0BDD7F716B7915429687F2CD1FF306 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6D33D47911FBF12B712A54AA242291B /* CRPageViewController */,
+				CEFF3889FACCA6817A5D1533C392AAFC /* HTPressableButton */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,24 +239,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CB2CD8C7706D6E8B309402586EA62B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29FC45F736E5EE7C1589EC483901F325 /* HTPressableButton.h in Headers */,
+				8C15A74605A275B47B44AB3A691D2A10 /* HTPressableButtonPrefs.h in Headers */,
+				5D7E815AA6B4408E24FED300AA31D58B /* UIColor+HTColor.h in Headers */,
+				19A71775C7090FB6CEBA5DF0CB2078D8 /* UIImage+HTButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4078DB9AF0F0E8DC59218856FAF6FFC7 /* Pods-drink-up */ = {
+		25FBA65C5A9BB86FE393BB878B6E7D31 /* Pods-drink-up */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24FD3F6D7D5A79F1BB1079FC279AC9B1 /* Build configuration list for PBXNativeTarget "Pods-drink-up" */;
+			buildConfigurationList = 5DD9EFC12E806E88C83883B690EDA73B /* Build configuration list for PBXNativeTarget "Pods-drink-up" */;
 			buildPhases = (
-				FC0AAF93BBF95A5BDE8CCFB70160ECDB /* Sources */,
-				B2893187ED00EAD11F8DA4BD2596440C /* Frameworks */,
+				B4ED54652DE3EDE701B5B09BB3B4351A /* Sources */,
+				EA03DCCA2F5FFB5B2FA339C1354CC1EE /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E99527DF90A3AC6C1148F43529D117BF /* PBXTargetDependency */,
+				C4551DCD5D5D52437D70A9B83924C0CB /* PBXTargetDependency */,
+				8F7DCEAD315032C87C4894B3E10593F1 /* PBXTargetDependency */,
 			);
 			name = "Pods-drink-up";
 			productName = "Pods-drink-up";
-			productReference = DE7868CA16EB904C7A6C6BBAD0C782EF /* libPods-drink-up.a */;
+			productReference = F5FDF942F38DF4D3706C61B5C2916AFF /* libPods-drink-up.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7951E150B2E673E5C8E41DC28A5ADBD9 /* HTPressableButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82D58F3B529349EBEBB6D646AC101448 /* Build configuration list for PBXNativeTarget "HTPressableButton" */;
+			buildPhases = (
+				2127A4D551ADFEDE0E4FBB0C6AB7FACB /* Sources */,
+				E64341A9841E72F12C0FCFDBAF4EB513 /* Frameworks */,
+				9CB2CD8C7706D6E8B309402586EA62B0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTPressableButton;
+			productName = HTPressableButton;
+			productReference = 8097D5A36B721CA49D1980DB6EA0E1A5 /* libHTPressableButton.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B17EC6EF021BDB73AE8EE165522AD10A /* CRPageViewController */ = {
@@ -198,7 +302,7 @@
 			);
 			name = CRPageViewController;
 			productName = CRPageViewController;
-			productReference = 0A0B5EDE4A88446691AAFF97ABABFA2C /* libCRPageViewController.a */;
+			productReference = AC482E3DEB32B910BFF8A3E9EE19A827 /* libCRPageViewController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -218,12 +322,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C76F6F1891D3BC126C50C7AE3EB549C7 /* Products */;
+			productRefGroup = 32CCD522A93220EAFED2B07C42B953BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B17EC6EF021BDB73AE8EE165522AD10A /* CRPageViewController */,
-				4078DB9AF0F0E8DC59218856FAF6FFC7 /* Pods-drink-up */,
+				7951E150B2E673E5C8E41DC28A5ADBD9 /* HTPressableButton */,
+				25FBA65C5A9BB86FE393BB878B6E7D31 /* Pods-drink-up */,
 			);
 		};
 /* End PBXProject section */
@@ -238,22 +343,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC0AAF93BBF95A5BDE8CCFB70160ECDB /* Sources */ = {
+		2127A4D551ADFEDE0E4FBB0C6AB7FACB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35DE8CAAAB96A29DC1D4CE16E93C75BA /* Pods-drink-up-dummy.m in Sources */,
+				75B25E65683DD0EA6A41D3A25318FE35 /* HTPressableButton-dummy.m in Sources */,
+				6256EB59488B42AB0B43712054FC9ADA /* HTPressableButton.m in Sources */,
+				DCAC6D0580EF1749ADA1FC04D0166426 /* HTPressableButtonPrefs.m in Sources */,
+				BBECBF3DEE92BA0AF28B8D28EE73BC21 /* UIColor+HTColor.m in Sources */,
+				053D980D80AD73E93E7B1552A25226CB /* UIImage+HTButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED54652DE3EDE701B5B09BB3B4351A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4400393598BBAE70A713B186E4FBCE /* Pods-drink-up-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E99527DF90A3AC6C1148F43529D117BF /* PBXTargetDependency */ = {
+		8F7DCEAD315032C87C4894B3E10593F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTPressableButton;
+			target = 7951E150B2E673E5C8E41DC28A5ADBD9 /* HTPressableButton */;
+			targetProxy = 0E010E4FF4DA2A89DE13AD1C1105925E /* PBXContainerItemProxy */;
+		};
+		C4551DCD5D5D52437D70A9B83924C0CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CRPageViewController;
 			target = B17EC6EF021BDB73AE8EE165522AD10A /* CRPageViewController */;
-			targetProxy = 4FF1EE0A46BC6B1C52219A4EA4264ABE /* PBXContainerItemProxy */;
+			targetProxy = 9EF196306610BC01EE026AB646442FF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -300,7 +423,28 @@
 			};
 			name = Debug;
 		};
-		248F48D6914D4EE9F7016F497ECB1BB2 /* Release */ = {
+		31DEA9462F9C2C9820BC30D98410CE7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B1E88D083067968E2CDA693D16989AF /* HTPressableButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTPressableButton/HTPressableButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3B757F90AADBC52B6314887DA49E39C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60CB86BE13C0943C8E1D1EF0BA16E52C /* Pods-drink-up.release.xcconfig */;
 			buildSettings = {
@@ -321,9 +465,30 @@
 			};
 			name = Release;
 		};
+		3F170E4B336C8C2FE34202BD568077F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274A5D08C6746ECDB6CF23E8FE718950 /* Pods-drink-up.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		876F530649AAFDBA02C97B618F7D9143 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70D167A25185A7C015CC3C7F54D8ACF /* CRPageViewController.xcconfig */;
+			baseConfigurationReference = 20759C1C7A5852B9FAD6CDB104899C83 /* CRPageViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -344,7 +509,7 @@
 		};
 		B58902DEC74E6EB7BDF655281627A48C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70D167A25185A7C015CC3C7F54D8ACF /* CRPageViewController.xcconfig */;
+			baseConfigurationReference = 20759C1C7A5852B9FAD6CDB104899C83 /* CRPageViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -358,27 +523,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BF40F462722FD7E9C011BB30B1BAAF4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 274A5D08C6746ECDB6CF23E8FE718950 /* Pods-drink-up.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -422,18 +566,30 @@
 			};
 			name = Release;
 		};
+		C865161E1F06F68F366E9ADA97F8F212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B1E88D083067968E2CDA693D16989AF /* HTPressableButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTPressableButton/HTPressableButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24FD3F6D7D5A79F1BB1079FC279AC9B1 /* Build configuration list for PBXNativeTarget "Pods-drink-up" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF40F462722FD7E9C011BB30B1BAAF4D /* Debug */,
-				248F48D6914D4EE9F7016F497ECB1BB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -443,11 +599,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5DD9EFC12E806E88C83883B690EDA73B /* Build configuration list for PBXNativeTarget "Pods-drink-up" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F170E4B336C8C2FE34202BD568077F4 /* Debug */,
+				3B757F90AADBC52B6314887DA49E39C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		61A22B4BE07A35C8BB08844FFD8178CE /* Build configuration list for PBXNativeTarget "CRPageViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B58902DEC74E6EB7BDF655281627A48C /* Debug */,
 				876F530649AAFDBA02C97B618F7D9143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82D58F3B529349EBEBB6D646AC101448 /* Build configuration list for PBXNativeTarget "HTPressableButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C865161E1F06F68F366E9ADA97F8F212 /* Debug */,
+				31DEA9462F9C2C9820BC30D98410CE7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
