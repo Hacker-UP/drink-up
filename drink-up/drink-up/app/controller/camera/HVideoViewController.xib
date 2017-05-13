@@ -81,7 +81,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-ee-s7A">
                         <rect key="frame" x="67" y="299.5" width="240" height="128"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="model-sample" translatesAutoresizingMaskIntoConstraints="NO" id="nce-iA-ffi">
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="model-sample" translatesAutoresizingMaskIntoConstraints="NO" id="nce-iA-ffi" userLabel="full">
                                 <rect key="frame" x="20" y="-272" width="200" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="FA5-Bb-cZP"/>
@@ -95,17 +95,13 @@
                             <constraint firstItem="nce-iA-ffi" firstAttribute="centerX" secondItem="UBb-ee-s7A" secondAttribute="centerX" id="vVs-bj-6ji"/>
                         </constraints>
                     </view>
-                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bCi-AA-rmk">
-                        <rect key="frame" x="259" y="318" width="118" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </slider>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="tfv-We-weZ" firstAttribute="leading" secondItem="Cci-RD-al8" secondAttribute="leading" constant="-10" id="0Cq-9w-6x0"/>
                     <constraint firstItem="3rS-qF-pD1" firstAttribute="top" secondItem="2PX-ic-iLz" secondAttribute="top" id="4WU-fq-jeV"/>
-                    <constraint firstItem="UBb-ee-s7A" firstAttribute="centerY" secondItem="3rS-qF-pD1" secondAttribute="centerY" constant="30" id="7V5-6B-jFB"/>
                     <constraint firstAttribute="trailing" secondItem="5P7-6O-Oma" secondAttribute="trailing" constant="15" id="80h-mf-ixs"/>
+                    <constraint firstItem="Joq-8V-54W" firstAttribute="top" secondItem="UBb-ee-s7A" secondAttribute="bottom" constant="85.5" id="98N-Dw-lSn"/>
                     <constraint firstAttribute="trailing" secondItem="3rS-qF-pD1" secondAttribute="trailing" id="A9x-kN-aDI"/>
                     <constraint firstItem="Cci-RD-al8" firstAttribute="centerY" secondItem="2KL-J8-GZD" secondAttribute="centerY" id="Dfw-U1-Bgb"/>
                     <constraint firstItem="5ec-K8-7v9" firstAttribute="centerX" secondItem="2PX-ic-iLz" secondAttribute="centerX" id="Hmw-ku-lHl"/>
@@ -137,9 +133,11 @@
                 <outlet property="btnEnsure" destination="2KL-J8-GZD" id="C6h-z1-Yhh"/>
                 <outlet property="ensureCenterX" destination="XhK-PD-eCV" id="iho-8T-c7V"/>
                 <outlet property="focusCursor" destination="7An-no-kt2" id="zZy-Ob-px8"/>
+                <outlet property="fullBottle" destination="nce-iA-ffi" id="OU6-yb-8o2"/>
                 <outlet property="imgRecord" destination="Cci-RD-al8" id="BJ4-nL-XbI"/>
                 <outlet property="labelTipTitle" destination="Joq-8V-54W" id="Ghm-MF-8s5"/>
                 <outlet property="progressView" destination="tfv-We-weZ" id="jWQ-tF-nK8"/>
+                <outlet property="showHeight" destination="ufP-Oc-OkB" id="5bi-Sq-suF"/>
             </connections>
             <point key="canvasLocation" x="-341.5" y="11.5"/>
         </viewController>

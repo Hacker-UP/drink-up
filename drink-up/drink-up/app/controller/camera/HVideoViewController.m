@@ -12,6 +12,7 @@
 #import "HProgressView.h"
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "Masonry.h"
 
 typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 @interface HVideoViewController ()<AVCaptureFileOutputRecordingDelegate>
@@ -70,7 +71,9 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 @property (strong, nonatomic) UIImage *takeImage;
 @property (strong, nonatomic) UIImageView *takeImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *imgRecord;
+@property (weak, nonatomic) IBOutlet UIImageView *fullBottle;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *showHeight;
 
 @end
 
@@ -88,18 +91,31 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
-    // UIImage *image = [UIImage imageNamed:@"sc_btn_take.png"];
-//    self.backCenterX.constant = -(SCREEN_WIDTH/2/2)-image.size.width/2/2;
-    
     self.progressView.layer.cornerRadius = self.progressView.frame.size.width/2;
     
     if (self.HSeconds == 0) {
         self.HSeconds = 60;
     }
     
+    UISlider *slide = [UISlider new];
+    CGAffineTransform rotation = CGAffineTransformMakeRotation(-1.57079633);
+    slide.transform = rotation;
+    slide.frame = CGRectMake(self.view.frame.size.width - 50, 20, 50, self.view.frame.size.height / 2.0 + 90);
+    slide.minimumValue = 0;
+    slide.maximumValue = 400;
+    
+    slide.value = self.showHeight.constant;
+    
+    [slide addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.view addSubview:slide];
+    
     [self performSelector:@selector(hiddenTipsLabel) withObject:nil afterDelay:4];
+}
+
+- (void)sliderValueChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    self.showHeight.constant = slider.value;
 }
 
 - (void)hiddenTipsLabel {
