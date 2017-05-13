@@ -37,6 +37,11 @@
     [self setLayouts];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
 - (void)initialsViews {
     self.view.backgroundColor = [UIColor whiteColor];
     
