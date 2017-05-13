@@ -7,6 +7,8 @@
 //
 
 #import "DUFeedbackViewController.h"
+#import "DUFeedbackUpViewController.h"
+#import "DUFeedbackDownViewController.h"
 
 #import "Masonry.h"
 
@@ -16,8 +18,10 @@
 @property (nonatomic, strong) UIImageView *containerEmptyImageView;
 @property (nonatomic, strong) UIImageView *containerFullImageView;
 @property (nonatomic, strong) UIView *maskView;
+@property (nonatomic, strong) UILabel *capacityLabel;
 
 @property (nonatomic, strong) UIImageView *resultImageView;
+@property (nonatomic, strong) UIButton *arrorButton;
 
 @end
 
@@ -46,6 +50,15 @@
     self.containerFullImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"container-1-full"]];
     self.containerFullImageView.contentMode = UIViewContentModeBottom;
     
+    self.capacityLabel = [UILabel new];
+    self.capacityLabel.text = [NSString stringWithFormat:@"%ld ml", self.capacity];
+    self.capacityLabel.font = [UIFont fontWithName:@"PingFangSC-Thin" size:36];
+    self.capacityLabel.textAlignment = NSTextAlignmentCenter;
+    self.capacityLabel.alpha = 0;
+    
+    self.arrorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.arrorButton setImage:[UIImage imageNamed:@"arror"] forState:UIControlStateNormal];
+    self.arrorButton.alpha = 0;
 }
 
 - (void)addSubviews {
@@ -53,6 +66,8 @@
     [self.containerView addSubview:self.containerEmptyImageView];
     [self.containerView addSubview:self.maskView];
     [self.maskView addSubview:self.containerFullImageView];
+    [self.view addSubview:self.capacityLabel];
+    [self.view addSubview:self.arrorButton];
 }
 
 - (void)setLayouts {
@@ -84,12 +99,32 @@
                           delay:1
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.resultImageView.transform = CGAffineTransformMakeTranslation(-80, 0);
-                         self.resultImageView.transform = CGAffineTransformScale(self.resultImageView.transform, 0.7, 0.7);
+                         self.resultImageView.transform = CGAffineTransformMakeTranslation(-100, 0);
+                         self.resultImageView.transform = CGAffineTransformScale(self.resultImageView.transform, 0.5, 0.5);
                      }
                      completion:^(BOOL finished) {
-                         
+                         [UIView animateWithDuration:0.4 animations:^{
+                             self.capacityLabel.alpha = 1;
+                         } completion:^(BOOL finished) {
+                             [UIView animateWithDuration:0.4 animations:^{
+                                 self.arrorButton.alpha = 1;
+                             } completion:^(BOOL finished) {
+                                 
+                             }];
+                         }];
                      }];
+    
+    [self.capacityLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.resultImageView.mas_bottom).with.offset(20);
+        make.centerX.equalTo(self.resultImageView);
+    }];
+    
+    [self.arrorButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@15);
+        make.height.equalTo(@30);
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.resultImageView).with.offset(20);
+    }];
 }
 
 -(UIImage*)convertViewToImage:(UIView*)v{
@@ -101,5 +136,16 @@
     UIGraphicsEndImageContext();
     return image;
 }
+
+- (IBAction)toDownVC:(id)sender {
+    DUFeedbackDownViewController *downVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackDownViewController"];
+    [self.navigationController pushViewController:downVC animated:YES];
+}
+
+- (IBAction)toUpVC:(id)sender {
+    DUFeedbackUpViewController *upVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackUpViewController"];
+    [self.navigationController pushViewController:upVC animated:YES];
+}
+
 
 @end

@@ -11,5 +11,6 @@
 @interface DUFeedbackViewController : UIViewController
 
 @property (assign) CGFloat proportion;
+@property (assign) NSInteger capacity;
 
 @end

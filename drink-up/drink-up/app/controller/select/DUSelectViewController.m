@@ -68,10 +68,12 @@
     ctrl.modalPresentationStyle = UIModalPresentationOverFullScreen;
     ctrl.HSeconds = 10000;//设置可录制最长时间
     ctrl.capacity = [self.currentVC.sourse[1] integerValue];
+    WS(weakSelf);
     
     ctrl.takeBlock = ^(id item, CGFloat proportion) {
         DUFeedbackViewController *feedbackVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackViewController"];
         feedbackVC.proportion = proportion;
+        feedbackVC.capacity = [weakSelf.currentVC.sourse[1] floatValue] * proportion;
         [self.navigationController pushViewController:feedbackVC animated:true];
     };
     [self presentViewController:ctrl animated:YES completion:nil];
