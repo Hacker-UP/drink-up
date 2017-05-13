@@ -75,7 +75,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 @end
 
 //时间大于这个就是视频，否则为拍照
-#define TimeMax 1
+#define TimeMax 200
 
 @implementation HVideoViewController
 
@@ -90,8 +90,8 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    UIImage *image = [UIImage imageNamed:@"sc_btn_take.png"];
-    self.backCenterX.constant = -(SCREEN_WIDTH/2/2)-image.size.width/2/2;
+    // UIImage *image = [UIImage imageNamed:@"sc_btn_take.png"];
+//    self.backCenterX.constant = -(SCREEN_WIDTH/2/2)-image.size.width/2/2;
     
     self.progressView.layer.cornerRadius = self.progressView.frame.size.width/2;
     
