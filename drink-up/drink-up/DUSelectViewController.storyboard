@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-hN-qJ6">
-                                <rect key="frame" x="20" y="120" width="335" height="335"/>
+                                <rect key="frame" x="20" y="82" width="335" height="335"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xNO-hN-qJ6" secondAttribute="height" multiplier="1:1" id="2Wp-be-snb"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xNO-hN-qJ6" firstAttribute="top" secondItem="6SE-yf-W88" secondAttribute="top" constant="120" id="3aZ-1j-bZi"/>
+                            <constraint firstItem="xNO-hN-qJ6" firstAttribute="top" secondItem="6SE-yf-W88" secondAttribute="top" constant="82" id="3aZ-1j-bZi"/>
                             <constraint firstItem="xNO-hN-qJ6" firstAttribute="leading" secondItem="6SE-yf-W88" secondAttribute="leading" constant="20" id="5oz-2i-OOg"/>
                             <constraint firstAttribute="trailing" secondItem="xNO-hN-qJ6" secondAttribute="trailing" constant="20" id="9Tw-pt-2e1"/>
                             <constraint firstItem="xNO-hN-qJ6" firstAttribute="centerX" secondItem="6SE-yf-W88" secondAttribute="centerX" id="zEZ-fS-SQd"/>
@@ -85,6 +85,10 @@
         <scene sceneID="99O-oq-08V">
             <objects>
                 <viewController id="fvz-Ar-3gE" customClass="CRPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SQm-T9-Y7w"/>
+                        <viewControllerLayoutGuide type="bottom" id="J5U-9H-3X9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kqh-pS-Mfs">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

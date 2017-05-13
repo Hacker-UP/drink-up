@@ -65,6 +65,7 @@
 
 - (void)toShoot{
     HVideoViewController *ctrl = [[NSBundle mainBundle] loadNibNamed:@"HVideoViewController" owner:nil options:nil].lastObject;
+    ctrl.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     ctrl.HSeconds = 10000;//设置可录制最长时间
     ctrl.takeBlock = ^(id item) {
         
