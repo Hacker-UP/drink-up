@@ -21,6 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usz-Hc-fnB">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Sm4-Nf-I26"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APp-dh-lpB">
                                 <rect key="frame" x="20" y="594" width="335" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.66274509800000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,14 +43,20 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="APp-dh-lpB" secondAttribute="bottom" constant="20" id="5ED-OM-w33"/>
+                            <constraint firstAttribute="trailing" secondItem="Usz-Hc-fnB" secondAttribute="trailing" id="9wq-mM-oXx"/>
                             <constraint firstItem="APp-dh-lpB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="D7L-1h-z6p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Usz-Hc-fnB" secondAttribute="bottom" id="PAf-4h-Oeo"/>
+                            <constraint firstItem="Usz-Hc-fnB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QUb-74-Koq"/>
                             <constraint firstAttribute="trailing" secondItem="APp-dh-lpB" secondAttribute="trailing" constant="20" id="qym-5a-QKv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C9o-Ql-eie"/>
+                    <connections>
+                        <outlet property="bakView" destination="Usz-Hc-fnB" id="io7-Zi-CWZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
