@@ -133,7 +133,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 }
 
 - (void)hiddenTipsLabel {
-    self.labelTipTitle.hidden = YES;
+//    self.labelTipTitle.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -389,6 +389,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
             self.fullImageView.alpha = 1;
             self.slide.alpha = 0.4;
             self.mlLabel.alpha = 1;
+            self.labelTipTitle.text = @"Slide to log your water left.";
         }];
         [self videoHandlePhoto:outputFileURL];
     }
@@ -699,6 +700,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
         self.slide.alpha = 0;
         self.fullImageView.alpha = 0;
         self.mlLabel.alpha = 0;
+        self.labelTipTitle.text = @"Move your phone to match the container.";
     } completion:^(BOOL finished) {
         
     }];
