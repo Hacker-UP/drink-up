@@ -10,4 +10,6 @@
 
 @interface DUFeedbackViewController : UIViewController
 
+@property (assign) CGFloat proportion;
+
 @end

@@ -147,6 +147,7 @@
                 <outlet property="btnBack" destination="B7C-YV-oZN" id="HOj-Xt-O8S"/>
                 <outlet property="btnCamera" destination="5P7-6O-Oma" id="rmw-rU-OK5"/>
                 <outlet property="btnEnsure" destination="2KL-J8-GZD" id="C6h-z1-Yhh"/>
+                <outlet property="emptyImageView" destination="9O4-hh-EMa" id="Ts6-4n-7bq"/>
                 <outlet property="ensureCenterX" destination="XhK-PD-eCV" id="iho-8T-c7V"/>
                 <outlet property="focusCursor" destination="7An-no-kt2" id="zZy-Ob-px8"/>
                 <outlet property="fullBottle" destination="nce-iA-ffi" id="OU6-yb-8o2"/>

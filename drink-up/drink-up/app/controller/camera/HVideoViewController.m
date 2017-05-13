@@ -76,9 +76,12 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *showHeight;
 
 @property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *emptyImageView;
 
 @property (strong, nonatomic) UISlider *slide;
 @property (weak, nonatomic) IBOutlet UILabel *mlLabel;
+
+
 
 @end
 
@@ -126,7 +129,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     UISlider *slider = (UISlider *)sender;
     self.showHeight.constant = slider.value;
     
-    self.mlLabel.text = [NSString stringWithFormat:@"%.1lf ml", 250.0 * slider.value / 290.0];
+    self.mlLabel.text = [NSString stringWithFormat:@"%.1lf ml", self.capacity * slider.value / 290.0];
 }
 
 - (void)hiddenTipsLabel {
@@ -138,6 +141,12 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     [self prefersStatusBarHidden];
     [self customCamera];
     [self.session startRunning];
+    
+
+    self.mlLabel.text = [NSString stringWithFormat:@"%.1lf ml", self.capacity * self.slide.value / 290.0];
+    self.fullImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"container-%ld-full", self.capacity]];
+    self.emptyImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"container-%ld-empty", self.capacity]];
+    
 }
 
 
@@ -287,7 +296,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
                 [Utility showAllTextDialog:KAppDelegate.window Text:@"保存视频到相册发生错误"];
             } else {
                 if (weakSelf.takeBlock) {
-                    weakSelf.takeBlock(assetURL);
+                    weakSelf.takeBlock(assetURL, self.slide.value / 290.0);
                 }
                 Plog(@"成功保存视频到相簿.");
                 [weakSelf onCancelAction:nil];
@@ -297,7 +306,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
         //照片
         UIImageWriteToSavedPhotosAlbum(self.takeImage, self, nil, nil);
         if (self.takeBlock) {
-            self.takeBlock(self.takeImage);
+            self.takeBlock(self.takeImage, self.slide.value / 290.0);
         }
 
         [self onCancelAction:nil];

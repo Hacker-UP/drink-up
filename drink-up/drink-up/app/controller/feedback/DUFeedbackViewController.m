@@ -46,7 +46,6 @@
     self.containerFullImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"container-1-full"]];
     self.containerFullImageView.contentMode = UIViewContentModeBottom;
     
-    
 }
 
 - (void)addSubviews {
@@ -66,7 +65,7 @@
         make.right.equalTo(self.containerView.mas_right);
         make.bottom.equalTo(self.containerView.mas_bottom);
         // TODO:
-        make.height.equalTo(@30);
+        make.height.equalTo(@(self.proportion * 290));
     }];
     
     [self.containerFullImageView mas_makeConstraints:^(MASConstraintMaker *make) {
