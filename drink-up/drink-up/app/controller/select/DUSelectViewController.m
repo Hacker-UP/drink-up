@@ -67,8 +67,7 @@
     ctrl.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     ctrl.modalPresentationStyle = UIModalPresentationOverFullScreen;
     ctrl.HSeconds = 10000;//设置可录制最长时间
-    // TODO: 传容器最大容量
-    ctrl.capacity = 300;
+    ctrl.capacity = [self.currentVC.sourse[1] integerValue];
     
     ctrl.takeBlock = ^(id item, CGFloat proportion) {
         DUFeedbackViewController *feedbackVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackViewController"];
