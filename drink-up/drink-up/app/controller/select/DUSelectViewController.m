@@ -88,8 +88,8 @@
     NSLog(@"Trigger");
     self.dataSourse = @[@[@"S Container", @"250"],
                         @[@"M Container", @"550"],
-                        @[@"L Container", @"800"],
-                        @[@"XL Container", @"1000"]];
+                        @[@"L Container", @"1500"],
+                        @[@"XL Container", @"4000"]];
     if ([segue.destinationViewController isKindOfClass:[CRPageViewController class]]) {
         self.pageViewController = [CRPageViewController new];
         self.sourse = [NSMutableArray new];
