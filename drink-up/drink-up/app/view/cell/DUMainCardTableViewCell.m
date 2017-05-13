@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *bakView;
 
+@property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *msgLabel;
 
 @end
 
@@ -23,7 +26,11 @@
     
     self.bakView.layer.masksToBounds = YES;
     self.bakView.layer.cornerRadius = 3;
-    
+}
+
+- (void)configCells {
+    self.capacityLabel.text = self.obj.capacity;
+    self.msgLabel.text = [NSString stringWithFormat:@"Gained a %@ Tree / %@", self.obj.level, self.obj.date];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

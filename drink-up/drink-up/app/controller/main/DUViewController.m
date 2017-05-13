@@ -9,6 +9,7 @@
 #import "DUViewController.h"
 #import "DUSelectViewController.h"
 #import "HVideoViewController.h"
+#import "DUUserDefaultHelper.h"
 
 #import "DUMainCardTableViewCell.h"
 
@@ -19,6 +20,8 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *bakView;
 
+@property (nonatomic, copy) NSMutableArray<DURecordObject *> *cellDatas;
+
 @end
 
 @implementation DUViewController
@@ -26,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initialDatas];
     [self initialViews];
     [self registerCells];
     [self addViews];
@@ -35,6 +39,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = NO;
+    [self updateDatas];
+}
+
+- (void)initialDatas {
+    self.cellDatas = [DUUserDefaultHelper readData].copy;
 }
 
 - (void)initialViews {
@@ -73,6 +82,11 @@
     }];
 }
 
+- (void)updateDatas {
+    self.cellDatas = [DUUserDefaultHelper readData].copy;
+    [self.tableView reloadData];
+}
+
 - (IBAction)toCamera:(id)sender {
     DUSelectViewController *selectVC = [[UIStoryboard storyboardWithName:@"DUSelectViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUSelectViewController"];
 
@@ -90,13 +104,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.cellDatas.count;
 }
 
 #pragma mark - UITableDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DUMainCardTableViewCell *cell = (DUMainCardTableViewCell *)[tableView dequeueReusableCellWithIdentifier:DUMainCardTableViewCellId forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.obj = self.cellDatas[indexPath.row];
+    [cell configCells];
     return cell;
 }
 

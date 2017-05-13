@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "DURecordObject.h"
+
 @interface DUUserDefaultHelper : NSObject
+
++ (void)writeData: (DURecordObject *)record;
++ (NSMutableArray<DURecordObject *> *)readData;
 
 @end

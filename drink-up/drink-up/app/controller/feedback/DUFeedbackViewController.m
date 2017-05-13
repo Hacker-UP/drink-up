@@ -9,6 +9,8 @@
 #import "DUFeedbackViewController.h"
 #import "DUFeedbackUpViewController.h"
 #import "DUFeedbackDownViewController.h"
+#import "DURecordObject.h"
+#import "DUUserDefaultHelper.h"
 
 #import "Masonry.h"
 
@@ -32,6 +34,7 @@
     [self initialViews];
     [self addSubviews];
     [self setLayouts];
+    [self setDatas];
     [self animated];
 }
 
@@ -86,6 +89,11 @@
     [self.containerFullImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.maskView).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
+}
+
+- (void)setDatas {
+    DURecordObject *record = [[DURecordObject alloc]initWithCapacity:self.capacity level:(self.capacity / 50 + 1) date:[NSDate new]];
+    [DUUserDefaultHelper writeData:record];
 }
 
 - (void)animated {

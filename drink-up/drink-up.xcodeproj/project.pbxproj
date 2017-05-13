@@ -49,6 +49,7 @@
 		D5AF93851EC7A2140037BD43 /* DUMainCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF93831EC7A2140037BD43 /* DUMainCardTableViewCell.m */; };
 		D5AF93861EC7A2140037BD43 /* DUMainCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF93841EC7A2140037BD43 /* DUMainCardTableViewCell.xib */; };
 		D5AF938A1EC7AD860037BD43 /* DURecordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF93891EC7AD860037BD43 /* DURecordObject.m */; };
+		D5AF938E1EC7B89A0037BD43 /* DUUserDefaultHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF938D1EC7B89A0037BD43 /* DUUserDefaultHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		D5AF93841EC7A2140037BD43 /* DUMainCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DUMainCardTableViewCell.xib; path = app/view/cell/DUMainCardTableViewCell.xib; sourceTree = "<group>"; };
 		D5AF93881EC7AD860037BD43 /* DURecordObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DURecordObject.h; path = app/model/DURecordObject.h; sourceTree = "<group>"; };
 		D5AF93891EC7AD860037BD43 /* DURecordObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DURecordObject.m; path = app/model/DURecordObject.m; sourceTree = "<group>"; };
+		D5AF938C1EC7B89A0037BD43 /* DUUserDefaultHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DUUserDefaultHelper.h; path = app/tools/DUUserDefaultHelper.h; sourceTree = "<group>"; };
+		D5AF938D1EC7B89A0037BD43 /* DUUserDefaultHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DUUserDefaultHelper.m; path = app/tools/DUUserDefaultHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,7 @@
 		D557D39C1EC6FE6500ACC885 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				D5AF938B1EC7B87A0037BD43 /* tools */,
 				D557D3A41EC6FFEB00ACC885 /* framework */,
 				D5AF93871EC7AD3B0037BD43 /* model */,
 				D557D39D1EC6FE6D00ACC885 /* view */,
@@ -449,6 +453,15 @@
 				D5AF93891EC7AD860037BD43 /* DURecordObject.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		D5AF938B1EC7B87A0037BD43 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				D5AF938C1EC7B89A0037BD43 /* DUUserDefaultHelper.h */,
+				D5AF938D1EC7B89A0037BD43 /* DUUserDefaultHelper.m */,
+			);
+			name = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,6 +669,7 @@
 				D557D3FD1EC700F800ACC885 /* MASLayoutConstraint.m in Sources */,
 				D557D4091EC7014400ACC885 /* Utility.m in Sources */,
 				D557D4041EC700F800ACC885 /* MBProgressHUD.m in Sources */,
+				D5AF938E1EC7B89A0037BD43 /* DUUserDefaultHelper.m in Sources */,
 				D557D3CB1EC700A500ACC885 /* DUViewController.m in Sources */,
 				D5AF93801EC78B8A0037BD43 /* DUFeedbackDownViewController.m in Sources */,
 				D557D3D51EC700EC00ACC885 /* HAVPlayer.m in Sources */,

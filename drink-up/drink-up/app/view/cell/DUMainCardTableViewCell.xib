@@ -70,6 +70,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="bakView" destination="EVZ-0Y-8Q9" id="kND-Sc-le6"/>
+                <outlet property="capacityLabel" destination="kqe-CN-2LF" id="q3t-Kh-5GB"/>
+                <outlet property="msgLabel" destination="rWC-hJ-bQ5" id="kbQ-PV-XZu"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54"/>
         </tableViewCell>

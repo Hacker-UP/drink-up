@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DURecordObject.h"
 
 @interface DUMainCardTableViewCell : UITableViewCell
+
+@property(nonatomic, strong) DURecordObject *obj;
+
+- (void)configCells;
 
 @end
