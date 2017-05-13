@@ -4,14 +4,31 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CRPageViewController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Pods-drink-up.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4078DB9AF0F0E8DC59218856FAF6FFC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B17EC6EF021BDB73AE8EE165522AD10A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CF501D613021DE506A71F50EC9B9BFC7</key>
 		<dict>
 			<key>primary</key>
