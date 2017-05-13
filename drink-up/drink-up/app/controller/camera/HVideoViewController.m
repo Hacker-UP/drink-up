@@ -75,6 +75,11 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *showHeight;
 
+@property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
+
+@property (strong, nonatomic) UISlider *slide;
+@property (weak, nonatomic) IBOutlet UILabel *mlLabel;
+
 @end
 
 //时间大于这个就是视频，否则为拍照
@@ -85,8 +90,6 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 
 -(void)dealloc{
     [self removeNotification];
-    
-    
 }
 
 - (void)viewDidLoad {
@@ -97,18 +100,24 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
         self.HSeconds = 60;
     }
     
-    UISlider *slide = [UISlider new];
+    self.slide = [UISlider new];
     CGAffineTransform rotation = CGAffineTransformMakeRotation(-1.57079633);
-    slide.transform = rotation;
-    slide.frame = CGRectMake(self.view.frame.size.width - 50, 20, 50, self.view.frame.size.height / 2.0 + 90);
-    slide.minimumValue = 0;
-    slide.maximumValue = 400;
+    self.slide.transform = rotation;
+    self.slide.frame = CGRectMake(self.view.frame.size.width - 80, 135, 50, self.view.frame.size.height / 2.0 - 35);
+    self.slide.minimumValue = 0;
+    self.slide.maximumValue = 290;
     
-    slide.value = self.showHeight.constant;
+    self.showHeight.constant = 290;
+    self.slide.value = self.showHeight.constant;
+    self.slide.minimumTrackTintColor = DUButtonColor;
     
-    [slide addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.slide addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     
-    [self.view addSubview:slide];
+    [self.view addSubview:self.slide];
+    
+    self.slide.alpha = 0;
+    self.fullImageView.alpha = 0;
+    self.mlLabel.alpha = 0;
     
     [self performSelector:@selector(hiddenTipsLabel) withObject:nil afterDelay:4];
 }
@@ -116,6 +125,8 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 - (void)sliderValueChanged:(id)sender {
     UISlider *slider = (UISlider *)sender;
     self.showHeight.constant = slider.value;
+    
+    self.mlLabel.text = [NSString stringWithFormat:@"%.1lf ml", 250.0 * slider.value / 290.0];
 }
 
 - (void)hiddenTipsLabel {
@@ -364,6 +375,12 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     } else {
         //照片
         self.saveVideoUrl = nil;
+        // TODO:
+        [UIView animateWithDuration:0.8 animations:^{
+            self.fullImageView.alpha = 1;
+            self.slide.alpha = 0.4;
+            self.mlLabel.alpha = 1;
+        }];
         [self videoHandlePhoto:outputFileURL];
     }
     
@@ -668,8 +685,17 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     self.btnAfresh.hidden = YES;
     self.btnEnsure.hidden = YES;
     self.btnBack.hidden = NO;
+    
+    [UIView animateWithDuration:0.8 animations:^{
+        self.slide.alpha = 0;
+        self.fullImageView.alpha = 0;
+        self.mlLabel.alpha = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
     [UIView animateWithDuration:0.25 animations:^{
-        [self.view layoutIfNeeded];
+//        [self.view layoutIfNeeded];
     }];
 }
 
