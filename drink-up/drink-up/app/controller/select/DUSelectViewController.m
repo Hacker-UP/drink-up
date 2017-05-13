@@ -97,9 +97,9 @@
         }
         self.pageViewController = (CRPageViewController *)segue.destinationViewController;
         self.pageViewController.countPageInController = self.viewControllersNumber;
-        self.pageViewController.childVCSize = CGSizeMake(250, 500);
+        self.pageViewController.childVCSize = CGSizeMake(250, 352);
         self.pageViewController.sizeBetweenVC = -14;
-        self.pageViewController.OffsetOfHeightCentralVC = -20;
+        self.pageViewController.OffsetOfHeightCentralVC = 0;
         self.pageViewController.animationSpeed = 0.5;
         self.pageViewController.animation = UIViewAnimationCurveEaseInOut;
         self.pageViewController.viewControllers = [NSMutableArray arrayWithArray:self.sourse];
