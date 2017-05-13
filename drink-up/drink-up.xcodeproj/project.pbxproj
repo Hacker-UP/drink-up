@@ -41,6 +41,8 @@
 		D557D4101EC7023D00ACC885 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D557D40F1EC7023D00ACC885 /* Foundation.framework */; };
 		D557D4121EC7024300ACC885 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D557D4111EC7024300ACC885 /* UIKit.framework */; };
 		D557D4161EC72F8100ACC885 /* DUSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D557D4151EC72F8100ACC885 /* DUSelectViewController.m */; };
+		D5AF93761EC76CA90037BD43 /* DUFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF93751EC76CA90037BD43 /* DUFeedbackViewController.m */; };
+		D5AF93781EC76CE40037BD43 /* DUFeedbackViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AF93771EC76CE40037BD43 /* DUFeedbackViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,9 @@
 		D557D4111EC7024300ACC885 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D557D4141EC72F8100ACC885 /* DUSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DUSelectViewController.h; path = app/controller/select/DUSelectViewController.h; sourceTree = "<group>"; };
 		D557D4151EC72F8100ACC885 /* DUSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DUSelectViewController.m; path = app/controller/select/DUSelectViewController.m; sourceTree = "<group>"; };
+		D5AF93741EC76CA90037BD43 /* DUFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DUFeedbackViewController.h; sourceTree = "<group>"; };
+		D5AF93751EC76CA90037BD43 /* DUFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DUFeedbackViewController.m; sourceTree = "<group>"; };
+		D5AF93771EC76CE40037BD43 /* DUFeedbackViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DUFeedbackViewController.storyboard; path = app/view/DUFeedbackViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +260,7 @@
 			children = (
 				D557D3711EC6FDFA00ACC885 /* Main.storyboard */,
 				C45E75FF1EC73BE6006A1CF4 /* DUSelectViewController.storyboard */,
+				D5AF93771EC76CE40037BD43 /* DUFeedbackViewController.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 		D557D39E1EC6FE7300ACC885 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				D5AF93731EC76CA90037BD43 /* feedback */,
 				D557D39F1EC6FED500ACC885 /* main */,
 				D557D4131EC72F3400ACC885 /* select */,
 				D557D3A01EC6FEE000ACC885 /* camera */,
@@ -391,6 +398,16 @@
 			name = select;
 			sourceTree = "<group>";
 		};
+		D5AF93731EC76CA90037BD43 /* feedback */ = {
+			isa = PBXGroup;
+			children = (
+				D5AF93741EC76CA90037BD43 /* DUFeedbackViewController.h */,
+				D5AF93751EC76CA90037BD43 /* DUFeedbackViewController.m */,
+			);
+			name = feedback;
+			path = app/controller/feedback;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -461,7 +478,7 @@
 				TargetAttributes = {
 					D557D3641EC6FDFA00ACC885 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2KU9DLED5P;
+						DevelopmentTeam = DNL5G5M9A8;
 						ProvisioningStyle = Automatic;
 					};
 					D557D37D1EC6FDFA00ACC885 = {
@@ -506,6 +523,7 @@
 				D557D3781EC6FDFA00ACC885 /* LaunchScreen.storyboard in Resources */,
 				D557D3751EC6FDFA00ACC885 /* Assets.xcassets in Resources */,
 				D557D3D91EC700EC00ACC885 /* btn_video_flip_camera@2x.png in Resources */,
+				D5AF93781EC76CE40037BD43 /* DUFeedbackViewController.storyboard in Resources */,
 				D557D3731EC6FDFA00ACC885 /* Main.storyboard in Resources */,
 				C45E76001EC73BE6006A1CF4 /* DUSelectViewController.storyboard in Resources */,
 				D557D3D81EC700EC00ACC885 /* HVideoViewController.xib in Resources */,
@@ -587,6 +605,7 @@
 				D557D4001EC700F800ACC885 /* NSArray+MASAdditions.m in Sources */,
 				D557D4051EC700F800ACC885 /* DLHDActivityIndicator.m in Sources */,
 				C45E75FE1EC73BC2006A1CF4 /* DUContainerViewController.m in Sources */,
+				D5AF93761EC76CA90037BD43 /* DUFeedbackViewController.m in Sources */,
 				D557D36D1EC6FDFA00ACC885 /* AppDelegate.m in Sources */,
 				D557D3FF1EC700F800ACC885 /* MASViewConstraint.m in Sources */,
 				D557D3FD1EC700F800ACC885 /* MASLayoutConstraint.m in Sources */,
@@ -751,7 +770,7 @@
 			baseConfigurationReference = 52E0372120D1D9642302FC7C /* Pods-drink-up.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2KU9DLED5P;
+				DEVELOPMENT_TEAM = DNL5G5M9A8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/drink-up/app/framework/PrefixHeader.pch";
 				INFOPLIST_FILE = "drink-up/Info.plist";
@@ -767,7 +786,7 @@
 			baseConfigurationReference = D00DC54FA044B64C8D74B425 /* Pods-drink-up.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2KU9DLED5P;
+				DEVELOPMENT_TEAM = DNL5G5M9A8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/drink-up/app/framework/PrefixHeader.pch";
 				INFOPLIST_FILE = "drink-up/Info.plist";
