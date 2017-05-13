@@ -268,10 +268,10 @@
 		D557D39E1EC6FE7300ACC885 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				D5AF93731EC76CA90037BD43 /* feedback */,
 				D557D39F1EC6FED500ACC885 /* main */,
 				D557D4131EC72F3400ACC885 /* select */,
 				D557D3A01EC6FEE000ACC885 /* camera */,
+				D5AF93731EC76CA90037BD43 /* feedback */,
 			);
 			name = controller;
 			sourceTree = "<group>";
