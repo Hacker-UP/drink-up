@@ -25,7 +25,6 @@
     self.nameLabel.text = self.sourse[0];
     self.volumeLabel.text = [NSString stringWithFormat:@"%@mL", self.sourse[1]];
     self.containerImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"container-%@-empty", self.sourse[1]]];
-    
 }
 
 - (void)didReceiveMemoryWarning {

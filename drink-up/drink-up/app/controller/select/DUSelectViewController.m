@@ -85,7 +85,6 @@
 #pragma mark - segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Trigger");
     self.dataSourse = @[@[@"S Container", @"250"],
                         @[@"M Container", @"550"],
                         @[@"L Container", @"1500"],
@@ -115,12 +114,12 @@
 #pragma mark - CRPageViewControllerDelegate
 
 - (void)unfocusedViewController:(DUContainerViewController *)viewController {
-    NSLog(@"unfocusedViewController");
+//    NSLog(@"unfocusedViewController");
 //    [viewController zoomingImageOut];
 }
 
 - (void)focusedViewController:(DUContainerViewController *)viewController {
-    NSLog(@"focusedViewController");
+//    NSLog(@"focusedViewController");
     self.currentVC = viewController;
 //    [viewController zoomingImageIn];
 }
