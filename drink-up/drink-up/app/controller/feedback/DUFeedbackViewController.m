@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIImageView *containerFullImageView;
 @property (nonatomic, strong) UIView *maskView;
 
+@property (nonatomic, strong) UIImageView *resultImageView;
+
 @end
 
 @implementation DUFeedbackViewController
@@ -43,6 +45,8 @@
     
     self.containerFullImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"container-1-full"]];
     self.containerFullImageView.contentMode = UIViewContentModeBottom;
+    
+    
 }
 
 - (void)addSubviews {
@@ -71,8 +75,32 @@
 }
 
 - (void)animated {
-    [CATransaction begin];
+    self.resultImageView = [[UIImageView alloc]initWithImage:[self convertViewToImage:self.containerView]];
+    self.resultImageView.frame = self.containerView.frame;
+    [self.view addSubview:self.resultImageView];
     
+    self.containerView.alpha = 0;
+    
+    [UIView animateWithDuration:0.6
+                          delay:1
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         self.resultImageView.transform = CGAffineTransformMakeTranslation(-80, 0);
+                         self.resultImageView.transform = CGAffineTransformScale(self.resultImageView.transform, 0.7, 0.7);
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+}
+
+-(UIImage*)convertViewToImage:(UIView*)v{
+    CGSize s = v.bounds.size;
+    // 下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了
+    UIGraphicsBeginImageContextWithOptions(s, NO, 1.0);
+    [v.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
