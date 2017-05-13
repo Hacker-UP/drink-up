@@ -22,7 +22,7 @@
 @property (assign, nonatomic) NSInteger viewControllersNumber;
 @property (strong, nonatomic) NSArray *dataSourse;
 
-@property (strong, nonatomic) DUContainerViewController *curentVC;
+@property (strong, nonatomic) DUContainerViewController *currentVC;
 
 @end
 
@@ -34,8 +34,6 @@
     [self initialsViews];
     [self addSubViews];
     [self setLayouts];
-    
-//    [self addContainerPageVC];
 }
 
 - (void)initialsViews {
@@ -66,36 +64,12 @@
 - (void)toShoot{
     HVideoViewController *ctrl = [[NSBundle mainBundle] loadNibNamed:@"HVideoViewController" owner:nil options:nil].lastObject;
     ctrl.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    ctrl.modalPresentationStyle = UIModalPresentationOverFullScreen;
     ctrl.HSeconds = 10000;//设置可录制最长时间
     ctrl.takeBlock = ^(id item) {
         
     };
     [self presentViewController:ctrl animated:YES completion:nil];
-}
-
-- (void)addContainerPageVC {
-    self.dataSourse = @[@[@"Tristan" ,@"52"],
-                        @[@"Victor"  ,@"36"],
-                        @[@"Victor"  ,@"36"]];
-    
-    self.pageViewController = [CRPageViewController new];
-    self.sourse = [NSMutableArray new];
-    self.viewControllersNumber = 3;
-    for (int i = 0; i < self.viewControllersNumber; i++) {
-        [self.sourse addObject:[self createViewControllerWithNumber:i]];
-    }
-//    self.pageViewController = (CRPageViewController *)segue.destinationViewController;
-    self.pageViewController.countPageInController = self.viewControllersNumber;
-    self.pageViewController.childVCSize = CGSizeMake(250, 500);
-    self.pageViewController.sizeBetweenVC = 10;
-    self.pageViewController.OffsetOfHeightCentralVC = 0;
-    self.pageViewController.animationSpeed = 0.5;
-    self.pageViewController.animation = UIViewAnimationCurveEaseInOut;
-    self.pageViewController.viewControllers = [NSMutableArray arrayWithArray:self.sourse];
-    self.pageViewController.dataSource = self;
-    for (int i = (int)self.viewControllersNumber; i < 3; i++) {
-        [self.sourse addObject:[self createViewControllerWithNumber:i]];
-    }
 }
 
 - (DUContainerViewController *)createViewControllerWithNumber: (float) number {
@@ -109,6 +83,7 @@
 #pragma mark - segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Trigger");
     self.dataSourse = @[@[@"S Container", @"250"],
                         @[@"M Container", @"550"],
                         @[@"L Container", @"800"],
@@ -123,7 +98,7 @@
         self.pageViewController = (CRPageViewController *)segue.destinationViewController;
         self.pageViewController.countPageInController = self.viewControllersNumber;
         self.pageViewController.childVCSize = CGSizeMake(250, 500);
-        self.pageViewController.sizeBetweenVC = -20;
+        self.pageViewController.sizeBetweenVC = -14;
         self.pageViewController.OffsetOfHeightCentralVC = -20;
         self.pageViewController.animationSpeed = 0.5;
         self.pageViewController.animation = UIViewAnimationCurveEaseInOut;
@@ -138,11 +113,13 @@
 #pragma mark - CRPageViewControllerDelegate
 
 - (void)unfocusedViewController:(DUContainerViewController *)viewController {
+    NSLog(@"unfocusedViewController");
 //    [viewController zoomingImageOut];
 }
 
 - (void)focusedViewController:(DUContainerViewController *)viewController {
-    self.curentVC = viewController;
+    NSLog(@"focusedViewController");
+    self.currentVC = viewController;
 //    [viewController zoomingImageIn];
 }
 

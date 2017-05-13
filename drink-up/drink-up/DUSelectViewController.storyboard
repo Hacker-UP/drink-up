@@ -57,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-full" translatesAutoresizingMaskIntoConstraints="NO" id="Cy1-ba-YCc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-empty" translatesAutoresizingMaskIntoConstraints="NO" id="Cy1-ba-YCc">
                                 <rect key="frame" x="121.5" y="11.5" width="132" height="352"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="352" id="NWF-H1-lj4"/>
@@ -119,6 +119,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="container-1-full" width="132" height="352"/>
+        <image name="container-1-empty" width="132" height="352"/>
     </resources>
 </document>
