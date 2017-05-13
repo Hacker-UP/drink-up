@@ -30,7 +30,9 @@
         }
     };
 //    [self presentViewController:ctrl animated:YES completion:nil];
-    [self.navigationController pushViewController:[DUSelectViewController new] animated:YES];
+    DUSelectViewController *selectVC = [[UIStoryboard storyboardWithName:@"DUSelectViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUSelectViewController"];
+
+    [self.navigationController pushViewController:selectVC animated:YES];
     
 }
 

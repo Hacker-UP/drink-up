@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C2DB2B9895BA4DA59190997F /* libPods-drink-up.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CBD73B502B2C09D31CF6E1 /* libPods-drink-up.a */; };
+		C45E75FE1EC73BC2006A1CF4 /* DUContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C45E75FD1EC73BC2006A1CF4 /* DUContainerViewController.m */; };
+		C45E76001EC73BE6006A1CF4 /* DUSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45E75FF1EC73BE6006A1CF4 /* DUSelectViewController.storyboard */; };
 		D557D36A1EC6FDFA00ACC885 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D557D3691EC6FDFA00ACC885 /* main.m */; };
 		D557D36D1EC6FDFA00ACC885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D557D36C1EC6FDFA00ACC885 /* AppDelegate.m */; };
 		D557D3731EC6FDFA00ACC885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D557D3711EC6FDFA00ACC885 /* Main.storyboard */; };
@@ -61,6 +63,9 @@
 /* Begin PBXFileReference section */
 		51CBD73B502B2C09D31CF6E1 /* libPods-drink-up.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-drink-up.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E0372120D1D9642302FC7C /* Pods-drink-up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drink-up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drink-up/Pods-drink-up.debug.xcconfig"; sourceTree = "<group>"; };
+		C45E75FC1EC73BC2006A1CF4 /* DUContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DUContainerViewController.h; sourceTree = "<group>"; };
+		C45E75FD1EC73BC2006A1CF4 /* DUContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DUContainerViewController.m; sourceTree = "<group>"; };
+		C45E75FF1EC73BE6006A1CF4 /* DUSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DUSelectViewController.storyboard; sourceTree = "<group>"; };
 		D00DC54FA044B64C8D74B425 /* Pods-drink-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drink-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-drink-up/Pods-drink-up.release.xcconfig"; sourceTree = "<group>"; };
 		D557D3651EC6FDFA00ACC885 /* drink-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "drink-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D557D3691EC6FDFA00ACC885 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -249,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				D557D3711EC6FDFA00ACC885 /* Main.storyboard */,
+				C45E75FF1EC73BE6006A1CF4 /* DUSelectViewController.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -379,6 +385,8 @@
 			children = (
 				D557D4141EC72F8100ACC885 /* DUSelectViewController.h */,
 				D557D4151EC72F8100ACC885 /* DUSelectViewController.m */,
+				C45E75FC1EC73BC2006A1CF4 /* DUContainerViewController.h */,
+				C45E75FD1EC73BC2006A1CF4 /* DUContainerViewController.m */,
 			);
 			name = select;
 			sourceTree = "<group>";
@@ -453,7 +461,7 @@
 				TargetAttributes = {
 					D557D3641EC6FDFA00ACC885 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = DNL5G5M9A8;
+						DevelopmentTeam = 2KU9DLED5P;
 						ProvisioningStyle = Automatic;
 					};
 					D557D37D1EC6FDFA00ACC885 = {
@@ -499,6 +507,7 @@
 				D557D3751EC6FDFA00ACC885 /* Assets.xcassets in Resources */,
 				D557D3D91EC700EC00ACC885 /* btn_video_flip_camera@2x.png in Resources */,
 				D557D3731EC6FDFA00ACC885 /* Main.storyboard in Resources */,
+				C45E76001EC73BE6006A1CF4 /* DUSelectViewController.storyboard in Resources */,
 				D557D3D81EC700EC00ACC885 /* HVideoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +586,7 @@
 				D557D4031EC700F800ACC885 /* ViewController+MASAdditions.m in Sources */,
 				D557D4001EC700F800ACC885 /* NSArray+MASAdditions.m in Sources */,
 				D557D4051EC700F800ACC885 /* DLHDActivityIndicator.m in Sources */,
+				C45E75FE1EC73BC2006A1CF4 /* DUContainerViewController.m in Sources */,
 				D557D36D1EC6FDFA00ACC885 /* AppDelegate.m in Sources */,
 				D557D3FF1EC700F800ACC885 /* MASViewConstraint.m in Sources */,
 				D557D3FD1EC700F800ACC885 /* MASLayoutConstraint.m in Sources */,
@@ -741,10 +751,11 @@
 			baseConfigurationReference = 52E0372120D1D9642302FC7C /* Pods-drink-up.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DNL5G5M9A8;
+				DEVELOPMENT_TEAM = 2KU9DLED5P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/drink-up/app/framework/PrefixHeader.pch";
 				INFOPLIST_FILE = "drink-up/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "up.drink-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -756,10 +767,11 @@
 			baseConfigurationReference = D00DC54FA044B64C8D74B425 /* Pods-drink-up.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DNL5G5M9A8;
+				DEVELOPMENT_TEAM = 2KU9DLED5P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/drink-up/app/framework/PrefixHeader.pch";
 				INFOPLIST_FILE = "drink-up/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "up.drink-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -835,6 +847,7 @@
 				D557D3941EC6FDFA00ACC885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D557D3951EC6FDFA00ACC885 /* Build configuration list for PBXNativeTarget "drink-upTests" */ = {
 			isa = XCConfigurationList;
@@ -843,6 +856,7 @@
 				D557D3971EC6FDFA00ACC885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D557D3981EC6FDFA00ACC885 /* Build configuration list for PBXNativeTarget "drink-upUITests" */ = {
 			isa = XCConfigurationList;
@@ -851,6 +865,7 @@
 				D557D39A1EC6FDFA00ACC885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
