@@ -10,4 +10,9 @@
 
 @interface DUFeedbackUpViewController : UIViewController
 
+@property (nonatomic, copy) NSString *msg1;
+@property (nonatomic, copy) NSString *msg2;
+
+- (void) configure;
+
 @end

@@ -10,4 +10,7 @@
 
 @interface DUFeedbackDownViewController : UIViewController
 
+@property (nonatomic, copy) NSString *msg1;
+@property (nonatomic, copy) NSString *msg2;
+
 @end

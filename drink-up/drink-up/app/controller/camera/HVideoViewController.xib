@@ -78,19 +78,21 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-empty" translatesAutoresizingMaskIntoConstraints="NO" id="9O4-hh-EMa" userLabel="empty">
-                        <rect key="frame" x="87" y="75.5" width="200" height="352"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-empty" translatesAutoresizingMaskIntoConstraints="NO" id="9O4-hh-EMa" userLabel="empty">
+                        <rect key="frame" x="121" y="75.5" width="132" height="352"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="200" id="hbW-EL-Uss"/>
+                            <constraint firstAttribute="height" constant="352" id="5mO-ip-gae"/>
+                            <constraint firstAttribute="width" secondItem="9O4-hh-EMa" secondAttribute="height" multiplier="3:8" id="Wj9-NZ-oLZ"/>
                         </constraints>
                     </imageView>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-ee-s7A">
                         <rect key="frame" x="67" y="299.5" width="240" height="128"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-full" translatesAutoresizingMaskIntoConstraints="NO" id="nce-iA-ffi" userLabel="full">
-                                <rect key="frame" x="20" y="-224" width="200" height="352"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container-1-full" translatesAutoresizingMaskIntoConstraints="NO" id="nce-iA-ffi" userLabel="full">
+                                <rect key="frame" x="54" y="-224" width="132" height="352"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="FA5-Bb-cZP"/>
+                                    <constraint firstAttribute="height" constant="352" id="AXy-Xd-Ar9"/>
+                                    <constraint firstAttribute="width" secondItem="nce-iA-ffi" secondAttribute="height" multiplier="3:8" id="S2j-C0-7JE"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -101,8 +103,8 @@
                             <constraint firstItem="nce-iA-ffi" firstAttribute="centerX" secondItem="UBb-ee-s7A" secondAttribute="centerX" id="vVs-bj-6ji"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzx-7q-urk">
-                        <rect key="frame" x="161" y="387" width="51.5" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250mL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzx-7q-urk">
+                        <rect key="frame" x="161" y="387" width="53" height="20"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

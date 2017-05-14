@@ -129,7 +129,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     UISlider *slider = (UISlider *)sender;
     self.showHeight.constant = slider.value;
     
-    self.mlLabel.text = [NSString stringWithFormat:@"%.1lf ml", self.capacity * slider.value / 290.0];
+    self.mlLabel.text = [NSString stringWithFormat:@"%.1lfmL", self.capacity * slider.value / 290.0];
 }
 
 - (void)hiddenTipsLabel {
@@ -143,7 +143,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     [self.session startRunning];
     
 
-    self.mlLabel.text = [NSString stringWithFormat:@"%.1lf ml", self.capacity * self.slide.value / 290.0];
+    self.mlLabel.text = [NSString stringWithFormat:@"%.1lfmL", self.capacity * self.slide.value / 290.0];
     self.fullImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"container-%ld-full", self.capacity]];
     self.emptyImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"container-%ld-empty", self.capacity]];
     
