@@ -10,7 +10,7 @@
 
 @interface DUMainCardTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UIView *bakView;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
 

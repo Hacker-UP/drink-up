@@ -50,6 +50,7 @@
 		D5AF93861EC7A2140037BD43 /* DUMainCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF93841EC7A2140037BD43 /* DUMainCardTableViewCell.xib */; };
 		D5AF938A1EC7AD860037BD43 /* DURecordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF93891EC7AD860037BD43 /* DURecordObject.m */; };
 		D5AF938E1EC7B89A0037BD43 /* DUUserDefaultHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF938D1EC7B89A0037BD43 /* DUUserDefaultHelper.m */; };
+		D5AF93931EC7F5BC0037BD43 /* UIImage+Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF93921EC7F5BC0037BD43 /* UIImage+Capture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,8 @@
 		D5AF93891EC7AD860037BD43 /* DURecordObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DURecordObject.m; path = app/model/DURecordObject.m; sourceTree = "<group>"; };
 		D5AF938C1EC7B89A0037BD43 /* DUUserDefaultHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DUUserDefaultHelper.h; path = app/tools/DUUserDefaultHelper.h; sourceTree = "<group>"; };
 		D5AF938D1EC7B89A0037BD43 /* DUUserDefaultHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DUUserDefaultHelper.m; path = app/tools/DUUserDefaultHelper.m; sourceTree = "<group>"; };
+		D5AF93911EC7F5BC0037BD43 /* UIImage+Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Capture.h"; sourceTree = "<group>"; };
+		D5AF93921EC7F5BC0037BD43 /* UIImage+Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Capture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +461,8 @@
 		D5AF938B1EC7B87A0037BD43 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				D5AF93911EC7F5BC0037BD43 /* UIImage+Capture.h */,
+				D5AF93921EC7F5BC0037BD43 /* UIImage+Capture.m */,
 				D5AF938C1EC7B89A0037BD43 /* DUUserDefaultHelper.h */,
 				D5AF938D1EC7B89A0037BD43 /* DUUserDefaultHelper.m */,
 			);
@@ -664,6 +669,7 @@
 				D5AF937D1EC78B6B0037BD43 /* DUFeedbackUpViewController.m in Sources */,
 				C45E75FE1EC73BC2006A1CF4 /* DUContainerViewController.m in Sources */,
 				D5AF93761EC76CA90037BD43 /* DUFeedbackViewController.m in Sources */,
+				D5AF93931EC7F5BC0037BD43 /* UIImage+Capture.m in Sources */,
 				D557D36D1EC6FDFA00ACC885 /* AppDelegate.m in Sources */,
 				D557D3FF1EC700F800ACC885 /* MASViewConstraint.m in Sources */,
 				D557D3FD1EC700F800ACC885 /* MASLayoutConstraint.m in Sources */,
