@@ -12,6 +12,7 @@
 #import "DUUserDefaultHelper.h"
 
 #import "DUMainCardTableViewCell.h"
+#import "UIImage+Capture.h"
 
 #import "Masonry.h"
 #import "HTPressableButton.h"
@@ -126,6 +127,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DUMainCardTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIImage *image = [UIImage imageCaptureFromView:cell.bakView];
+    NSArray *activityItems = @[image];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 @end

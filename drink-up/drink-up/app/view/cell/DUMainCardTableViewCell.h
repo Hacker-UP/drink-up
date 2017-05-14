@@ -12,7 +12,7 @@
 @interface DUMainCardTableViewCell : UITableViewCell
 
 @property(nonatomic, strong) DURecordObject *obj;
-
+@property (weak, nonatomic) IBOutlet UIView *bakView;
 - (void)configCells;
 
 @end
