@@ -19,4 +19,8 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)return:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end

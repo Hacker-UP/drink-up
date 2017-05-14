@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *msgLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *treeImageView;
 
 @end
 
@@ -31,6 +32,7 @@
 - (void)configCells {
     self.capacityLabel.text = self.obj.capacity;
     self.msgLabel.text = [NSString stringWithFormat:@"Gained a %@ Tree / %@", self.obj.level, self.obj.date];
+    self.treeImageView.image = [UIImage imageNamed:[self.obj getImageName]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -32,13 +32,29 @@
                                     <segue destination="fvz-Ar-3gE" kind="embed" id="iMR-pV-UDX"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9id-6x-qxo" customClass="HTPressableButton">
+                                <rect key="frame" x="20" y="594" width="335" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="UN5-4z-eaM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="18"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9id-6x-qxo" firstAttribute="leading" secondItem="6SE-yf-W88" secondAttribute="leading" constant="20" id="20V-ge-T74"/>
+                            <constraint firstItem="OVG-fT-6DR" firstAttribute="top" secondItem="9id-6x-qxo" secondAttribute="bottom" constant="20" id="BdS-dd-P6q"/>
                             <constraint firstItem="OVG-fT-6DR" firstAttribute="top" secondItem="xNO-hN-qJ6" secondAttribute="bottom" constant="219" id="Fly-ET-zCe"/>
+                            <constraint firstAttribute="trailing" secondItem="9id-6x-qxo" secondAttribute="trailing" constant="20" id="liV-UC-Bqw"/>
                             <constraint firstItem="xNO-hN-qJ6" firstAttribute="centerX" secondItem="6SE-yf-W88" secondAttribute="centerX" id="zEZ-fS-SQd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="9id-6x-qxo" id="F6G-VY-YrQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7b6-bP-hYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

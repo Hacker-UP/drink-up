@@ -19,6 +19,7 @@
                               @"capacity": obj.capacity,
                               @"date": obj.date,
                               @"level": obj.level,
+                              @"levelNum": [NSString stringWithFormat:@"%ld", obj.levelNum],
                               };
         [res addObject:dic];
     }
@@ -37,7 +38,7 @@
         obj.capacity = data[@"capacity"];
         obj.date = data[@"date"];
         obj.level = data[@"level"];
-        
+        obj.levelNum = [data[@"levelNum"] integerValue];
         [res addObject:obj];
     }
     return res;

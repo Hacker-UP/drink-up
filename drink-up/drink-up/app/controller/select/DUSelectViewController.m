@@ -13,10 +13,11 @@
 #import "DUFeedbackViewController.h"
 
 #import "Masonry.h"
+#import "HTPressableButton.h"
 
 @interface DUSelectViewController ()<CRPageViewControllerDataSource>
 
-@property (nonatomic, strong) UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet HTPressableButton *nextButton;
 
 @property (strong, nonatomic) CRPageViewController *pageViewController;
 @property (strong, nonatomic) NSMutableArray <DUContainerViewController *> *sourse;
@@ -33,8 +34,8 @@
     [super viewDidLoad];
     
     [self initialsViews];
-    [self addSubViews];
-    [self setLayouts];
+//    [self addSubViews];
+//    [self setLayouts];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,12 +46,19 @@
 - (void)initialsViews {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.nextButton setTitle:@"Select" forState:UIControlStateNormal];
+//    self.nextButton = [[HTPressableButton alloc] init];
+//    self.nextButton = [HTPressableButton buttonWithType:UIButtonTypeCustom];
+//    [self.nextButton setTitle:@"Select" forState:UIControlStateNormal];
     self.nextButton.backgroundColor = DUButtonColor;
-    [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.nextButton.titleLabel.font = DUButtonTitleFont;
+//    [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    self.nextButton.titleLabel.font = DUButtonTitleFont;
     [self.nextButton addTarget:self action:@selector(toShoot) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.nextButton.style = HTPressableButtonStyleRounded;
+    self.nextButton.shadowHeight = 8;
+    self.nextButton.buttonColor = DUButtonColor;
+    self.nextButton.shadowColor = DUButtonDarkenColor;
+    self.nextButton.cornerRadius = 6;
 }
 
 - (void)addSubViews {

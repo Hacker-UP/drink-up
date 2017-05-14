@@ -16,6 +16,7 @@
         self.capacity = [self getCapacityLabelText: capacity];
         self.level = [self getLevelLabelText: level];
         self.date = [self getDateLabelText:date];
+        self.levelNum = level;
     }
     return self;
 }
@@ -33,6 +34,10 @@
 
 - (NSString *)getLevelLabelText:(NSInteger)level {
     return [NSString stringWithFormat:@"Lv.%ld", level];
+}
+
+- (NSString *)getImageName {
+    return [NSString stringWithFormat:@"tree-%ld", self.levelNum];
 }
 
 #pragma mark - NSCoding

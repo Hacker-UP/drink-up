@@ -18,4 +18,8 @@
     [super viewDidLoad];
 }
 
+- (IBAction)return:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end

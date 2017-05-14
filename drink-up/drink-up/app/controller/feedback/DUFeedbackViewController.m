@@ -24,6 +24,9 @@
 
 @property (nonatomic, strong) UIImageView *resultImageView;
 @property (nonatomic, strong) UIButton *arrorButton;
+@property (nonatomic, strong) UIImageView *treeImageView;
+@property (nonatomic, strong) UILabel *levelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *msgLabel;
 
 @end
 
@@ -62,6 +65,17 @@
     self.arrorButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.arrorButton setImage:[UIImage imageNamed:@"arror"] forState:UIControlStateNormal];
     self.arrorButton.alpha = 0;
+    
+    self.treeImageView = [[UIImageView alloc] init];
+    self.treeImageView.contentMode = UIViewContentModeBottom;
+    self.treeImageView.alpha = 0;
+    
+    self.levelLabel = [UILabel new];
+    self.levelLabel.font = [UIFont fontWithName:@"PingFangSC-Thin" size:36];
+    self.levelLabel.textAlignment = NSTextAlignmentCenter;
+    self.levelLabel.alpha = 0;
+    
+    self.msgLabel.alpha = 0;
 }
 
 - (void)addSubviews {
@@ -71,6 +85,8 @@
     [self.maskView addSubview:self.containerFullImageView];
     [self.view addSubview:self.capacityLabel];
     [self.view addSubview:self.arrorButton];
+    [self.view addSubview:self.treeImageView];
+    [self.view addSubview:self.levelLabel];
 }
 
 - (void)setLayouts {
@@ -92,8 +108,28 @@
 }
 
 - (void)setDatas {
-    DURecordObject *record = [[DURecordObject alloc]initWithCapacity:self.capacity level:(self.capacity / 50 + 1) date:[NSDate new]];
+    NSInteger level = self.capacity / 50 + 1;
+    if (level > 8) level = 8;
+    DURecordObject *record = [[DURecordObject alloc]initWithCapacity:self.capacity level:level date:[NSDate new]];
     [DUUserDefaultHelper writeData:record];
+    
+    self.treeImageView.image = [UIImage imageNamed:[record getImageName]];
+    self.levelLabel.text = record.level;
+    
+    NSString *one = @"You will gain a ";
+    NSString *two = record.level;
+    NSString *three = @" tree if you drink this ";
+    NSString *four = record.capacity;
+    NSString *five = @" of water up.";
+    
+    NSMutableAttributedString *txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", one, two, three, four, five]];
+    [txt addAttribute:NSForegroundColorAttributeName value:DULabelDarkenColor range:NSMakeRange(0, one.length)];
+    [txt addAttribute:NSForegroundColorAttributeName value:DUButtonColor range:NSMakeRange(one.length, two.length)];
+    [txt addAttribute:NSForegroundColorAttributeName value:DULabelDarkenColor range:NSMakeRange(one.length + two.length, three.length)];
+    [txt addAttribute:NSForegroundColorAttributeName value:DUButtonColor range:NSMakeRange(one.length + two.length + three.length, four.length)];
+    [txt addAttribute:NSForegroundColorAttributeName value:DULabelDarkenColor range:NSMakeRange(one.length + two.length + three.length + four.length, five.length)];
+    [txt addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"PingFangSC-Thin" size:16.0] range:NSMakeRange(0, txt.length)];
+    self.msgLabel.attributedText = txt;
 }
 
 - (void)animated {
@@ -117,7 +153,14 @@
                              [UIView animateWithDuration:0.4 animations:^{
                                  self.arrorButton.alpha = 1;
                              } completion:^(BOOL finished) {
-                                 
+                                 [UIView animateWithDuration:0.4 animations:^{
+                                     self.treeImageView.alpha = 1;
+                                     self.levelLabel.alpha = 1;
+                                 } completion:^(BOOL finished) {
+                                     [UIView animateWithDuration:0.4 animations:^{
+                                         self.msgLabel.alpha = 1;
+                                     }];
+                                 }];
                              }];
                          }];
                      }];
@@ -132,6 +175,18 @@
         make.height.equalTo(@30);
         make.centerX.equalTo(self.view);
         make.centerY.equalTo(self.resultImageView).with.offset(20);
+    }];
+    
+    [self.treeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.resultImageView.mas_width);
+        make.height.equalTo(self.resultImageView.mas_height);
+        make.centerY.equalTo(self.resultImageView);
+        make.left.equalTo(self.arrorButton.mas_right).with.offset(30);
+    }];
+    
+    [self.levelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.treeImageView.mas_bottom).with.offset(20);
+        make.centerX.equalTo(self.treeImageView);
     }];
 }
 

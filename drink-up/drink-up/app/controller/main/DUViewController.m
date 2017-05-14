@@ -14,11 +14,13 @@
 #import "DUMainCardTableViewCell.h"
 
 #import "Masonry.h"
+#import "HTPressableButton.h"
 
 @interface DUViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *bakView;
+@property (weak, nonatomic) IBOutlet HTPressableButton *mainButton;
 
 @property (nonatomic, copy) NSMutableArray<DURecordObject *> *cellDatas;
 
@@ -63,6 +65,12 @@
     self.bakView.layer.shadowOpacity = 0.4;
     self.bakView.layer.shadowRadius = 1.0;
     self.bakView.clipsToBounds = NO;
+    
+    self.mainButton.style = HTPressableButtonStyleRounded;
+    self.mainButton.shadowHeight = 8;
+    self.mainButton.buttonColor = DUButtonColor;
+    self.mainButton.shadowColor = DUButtonDarkenColor;
+    self.mainButton.cornerRadius = 6;
 }
 
 - (void)registerCells {
