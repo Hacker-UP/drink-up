@@ -124,6 +124,9 @@
                             <constraint firstItem="MFi-Ov-aTl" firstAttribute="leading" secondItem="Y1e-og-cuk" secondAttribute="leading" constant="42" id="tqt-gl-LKD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="upLabel" destination="MFi-Ov-aTl" id="WOg-ak-42L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njB-0p-NfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,6 +179,9 @@
                             <constraint firstAttribute="trailing" secondItem="9Ce-AR-urj" secondAttribute="trailing" constant="42" id="uHL-fp-SW4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downLabel" destination="9Ce-AR-urj" id="gLe-A5-Cmy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHW-O7-rex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

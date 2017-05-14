@@ -12,7 +12,7 @@
 
 + (void)writeData: (DURecordObject *)record {
     NSMutableArray<DURecordObject *> *array = [DUUserDefaultHelper readData];
-    [array addObject:record];
+    [array insertObject:record atIndex:0];
     NSMutableArray<NSDictionary *> *res = @[].mutableCopy;
     for (DURecordObject *obj in array) {
         NSDictionary *dic = @{

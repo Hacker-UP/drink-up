@@ -12,5 +12,6 @@
 
 @property (assign) CGFloat proportion;
 @property (assign) NSInteger capacity;
+@property (assign) NSInteger fullCapacity;
 
 @end

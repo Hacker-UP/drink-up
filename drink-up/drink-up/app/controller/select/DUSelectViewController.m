@@ -87,6 +87,7 @@
         DUFeedbackViewController *feedbackVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackViewController"];
         feedbackVC.proportion = proportion;
         feedbackVC.capacity = [weakSelf.currentVC.sourse[1] floatValue] * proportion;
+        feedbackVC.fullCapacity = [weakSelf.currentVC.sourse[1] integerValue];
         [self.navigationController pushViewController:feedbackVC animated:true];
     };
     [self presentViewController:ctrl animated:YES completion:nil];

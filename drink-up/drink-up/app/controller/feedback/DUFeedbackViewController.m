@@ -28,6 +28,9 @@
 @property (nonatomic, strong) UILabel *levelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *msgLabel;
 
+@property (nonatomic, copy) NSString *msg1;
+@property (nonatomic, copy) NSString *msg2;
+
 @end
 
 @implementation DUFeedbackViewController
@@ -46,18 +49,18 @@
     self.containerView.frame = CGRectMake(self.view.frame.size.width / 2.0 - 100, self.view.frame.size.height - 352 - 239, 200, 352);
     self.containerView.backgroundColor = [UIColor clearColor];
     
-    self.containerEmptyImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"container-1-empty"]];
+    self.containerEmptyImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"container-%ld-empty", self.fullCapacity]]];
     self.containerEmptyImageView.contentMode = UIViewContentModeBottom;
     
     self.maskView = [[UIView alloc] initWithFrame: CGRectZero];
     self.maskView.backgroundColor = [UIColor clearColor];
     self.maskView.clipsToBounds = YES;
     
-    self.containerFullImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"container-1-full"]];
+    self.containerFullImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"container-%ld-full", self.fullCapacity]]];
     self.containerFullImageView.contentMode = UIViewContentModeBottom;
     
     self.capacityLabel = [UILabel new];
-    self.capacityLabel.text = [NSString stringWithFormat:@"%ld ml", self.capacity];
+    self.capacityLabel.text = [NSString stringWithFormat:@"%ldmL", self.capacity];
     self.capacityLabel.font = [UIFont fontWithName:@"PingFangSC-Thin" size:36];
     self.capacityLabel.textAlignment = NSTextAlignmentCenter;
     self.capacityLabel.alpha = 0;
@@ -117,9 +120,9 @@
     self.levelLabel.text = record.level;
     
     NSString *one = @"You will gain a ";
-    NSString *two = record.level;
+    NSString *two = self.msg1 = record.level;
     NSString *three = @" tree if you drink this ";
-    NSString *four = record.capacity;
+    NSString *four = self.msg2 = record.capacity;
     NSString *five = @" of water up.";
     
     NSMutableAttributedString *txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", one, two, three, four, five]];
@@ -202,11 +205,21 @@
 
 - (IBAction)toDownVC:(id)sender {
     DUFeedbackDownViewController *downVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackDownViewController"];
+    
+    downVC.msg1 = self.msg1;
+    downVC.msg2 = self.msg2;
+    
     [self.navigationController pushViewController:downVC animated:YES];
 }
 
 - (IBAction)toUpVC:(id)sender {
     DUFeedbackUpViewController *upVC = [[UIStoryboard storyboardWithName:@"DUFeedbackViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DUFeedbackUpViewController"];
+    
+    upVC.msg1 = self.msg1;
+    upVC.msg2 = self.msg2;
+    
+   
+    
     [self.navigationController pushViewController:upVC animated:YES];
 }
 
